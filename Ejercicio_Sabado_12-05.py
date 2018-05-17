@@ -3,6 +3,7 @@ TotIteraciones = 0
 Ejercicio = 0
 SumaPar = 0
 print "potato show"
+print"poto show otrah veh"
 try:
 	while True:
 			
