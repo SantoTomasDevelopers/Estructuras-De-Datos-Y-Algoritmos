@@ -2,7 +2,7 @@ Iteracion = 0
 TotIteraciones = 0
 Ejercicio = 0
 SumaPar = 0
-
+print "potato show"
 try:
 	while True:
 			
