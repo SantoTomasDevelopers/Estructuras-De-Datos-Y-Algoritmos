@@ -35,11 +35,12 @@ try:
 			print('Ejercicio 3')
 			while(True):
 				Iteracion = 0
-				while(int(TotIteraciones) <= 0 or int(TotIteraciones) > 100):
+				TotIteraciones = 0
+				while(TotIteraciones <= 0 or TotIteraciones > 100):
 					
-					TotIteraciones = input('Ingrese un numero para ver los multiplos de 2 y 3  entre 0 y 100:: ')
+					TotIteraciones = int(input('Ingrese un numero para ver los multiplos de 2 y 3  entre 0 y 100:: '))
 				
-				for Iteracion in range(int(Iteracion),int(TotIteraciones+1)):
+				for Iteracion in range(Iteracion,TotIteraciones+1):
 
 					if(Iteracion != 0 and Iteracion %2 == 0):
 						print('Multiple de 2 para el valor :: '+str(Iteracion))
