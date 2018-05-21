@@ -1,4 +1,4 @@
-import Funciones as fn
+import Funciones_JMGC as fn
 
 PonderacionControles = 0
 PonderacionPractico  = 0
