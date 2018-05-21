@@ -36,5 +36,6 @@ def eximido_o_reprobado (promedioTotal):
 		print("Felicidades ha quedado eximido con un promedio de : ", notaPresentacion)
 	elif (((notaPresentacion+70)/2)<40):
 		print ("Has reprobado")
-	elif(notaPresentacion)
+	elif (((promedioTotal+7.0)/2)>4.0):
+	print ("Debe rendir examen")
 
