@@ -37,5 +37,5 @@ def eximido_o_reprobado (promedioTotal):
 	elif (((notaPresentacion+70)/2)<40):
 		print ("Has reprobado")
 	elif (((promedioTotal+7.0)/2)>4.0):
-	print ("Debe rendir examen")
+		print ("Debe rendir examen")
 
