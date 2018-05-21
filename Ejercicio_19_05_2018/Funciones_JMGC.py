@@ -32,7 +32,7 @@ def TomaNotas(CantidadNotas,TipoNota):
 			Nota = 0.0
 			while(Nota<=0 or Nota >7.0):
 				try:
-					Nota = float(input('Ingrese '+TipoNota+' N° : '+str(i+1)+' :: '))
+					Nota = float(input('Ingrese Nota de '+TipoNota+' N° : '+str(i+1)+' :: '))
 				except Exception as e:
 					error = format(e)
 
@@ -40,19 +40,25 @@ def TomaNotas(CantidadNotas,TipoNota):
 				NotaBaja = Nota
 			if(Nota<NotaBaja):
 				NotaBaja = Nota
-			Suma += Nota 
-		Suma -= NotaBaja
-		Promedio = Suma	/ (CantidadNotas-1)
+			Suma = Suma + Nota 
+		
+		
 		if(TipoNota == 'Control'):
+			Suma = Suma - NotaBaja
+			Promedio = Suma	/ (CantidadNotas-1)
 			return (PonderacionTeorico * Promedio)/100 , Promedio
 
 		elif(TipoNota == 'Practico'):
+			Suma = Suma - NotaBaja
+			Promedio = Suma	/ (CantidadNotas-1)
 			return (ponderacionPractico * Promedio)/100 , Promedio
 
 		elif(TipoNota == 'Proyecto'):
+			Promedio = Suma	/ (CantidadNotas)
 			return (PonderacionProyecto* Promedio)/100 , Promedio
 
 		elif(TipoNota == 'Examen'):
+			Promedio = Suma	/ (CantidadNotas)
 			return (PonderacionExamen * Promedio)/100 , Promedio
 
 	else:
