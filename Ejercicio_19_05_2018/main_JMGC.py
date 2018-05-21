@@ -23,7 +23,7 @@ while(Opcion.upper() == 'SI' ):
         print('Alumno:: '+str(Nombre)+', '+str(ResultadoValidacion[1])+' con el promedio :: '+str(NotaAprobacion))
         
     if(ResultadoValidacion[0] == 0):#Reprobado sin rendir examen
-        print(ResultadoValidacion[1])
+        print('Alumno:: '+str(Nombre)+', '+ResultadoValidacion[1])
         
     if(ResultadoValidacion[0] == 2):#Rendir examen
         print('Alumno:: '+str(Nombre)+', '+ResultadoValidacion[1])

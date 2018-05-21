@@ -64,7 +64,7 @@ def ValidacionNotas(NotaControl,NotaPractico,NotaProyecto):
 	MensajeAprobado       = 'Usted Esta Aprobado y EXIMIDO del Examen!'
 	MensajeRendir         = 'Usted debe RENDIR el Examen!'
 	MensajeReprobado      = 'Usted Esta Reprobado! Por tener'
-	MensajeReprobadoDos   = 'promedio ROJO!'
+	MensajeReprobadoDos   = 'con promedio ROJO!'
 	MensajeReprobadoFinal = ''
 	MesnsajeError         = 'Error'
 	promedio 		      = 0
@@ -77,8 +77,16 @@ def ValidacionNotas(NotaControl,NotaPractico,NotaProyecto):
 		#print(MensajeReprobado)
 		if(NotaControl < 4.0 and NotaPractico >= 4.0 and NotaProyecto >= 4.0):#1 promedio rojo
 			Rojos = 'Control : '+str(NotaControl)
+		
+		elif(NotaControl < 4.0 and NotaProyecto < 4.0 and NotaPractico >= 4.0):#2 promedios rojos
+			Rojos = 'Control : '+str(NotaControl) +' y Proyecto : ' + str(NotaProyecto)
+
+		elif(NotaProyecto < 4.0 and NotaPractico < 4.0 and NotaControl >= 4.0):#2 promedios rojos
+			Rojos = 'Proyecto : '+str(NotaProyecto) +' y Practico : ' + str(NotaPractico)
+		
 		elif(NotaControl < 4.0 and NotaPractico < 4.0 and NotaProyecto >= 4.0):#2 promedios rojos
 			Rojos = 'Control : '+str(NotaControl) +' y Practico : ' + str(NotaPractico)
+		
 		elif(NotaControl < 4.0 and NotaPractico < 4.0 and NotaProyecto < 4.0):#3Promedios rojos
 			Rojos = 'Control : '+str(NotaControl) +' y Practico : ' + str(NotaPractico) +' y Proyecto : ' + str(NotaProyecto)
 		else:
