@@ -6,7 +6,6 @@
 #Examen
 #jprodrigues@rodriges.cl
 
-
 PonderacionTeorico  = 20
 ponderacionPractico = 12
 PonderacionProyecto = 48
@@ -18,17 +17,22 @@ def IngreseNombre():
 	return input('Ingrese su nombre ::: ')
 
 def TomaNotas(CantidadNotas,TipoNota):
+	#VarPonderaciones = __init__()
+	#NotaBaja = VarPonderaciones.NotaBaja
 	global NotaBaja
+	Nota = 0
 	if(CantidadNotas != 0):
 		Suma = 0
 		Promedio = 0
 		for i in range(CantidadNotas):
-			Nota = float(input('Ingrese '+TipoNota+' N° : '+str(i+1)+' :: '))
+			Nota = 0
+			while(Nota<=0 or Nota >7.0):
+				Nota = float(input('Ingrese '+TipoNota+' N° : '+str(i+1)+' :: '))
 			if(NotaBaja == 0):
 				NotaBaja = Nota
 			if(Nota<NotaBaja):
 				NotaBaja = Nota
-			Suma = Nota + Suma 
+			Suma += Nota 
 			#print(Suma)
 		Suma -= NotaBaja
 
@@ -52,6 +56,16 @@ def TomaNotas(CantidadNotas,TipoNota):
 		return 0
 
 
+def ValidacionNotas(NotaControl,NotaPractico):
+	Suma = 0
+	if(NotaControl < 4.0 or NotaPractico < 4.0):
+		#reprobado
+		return 0
+	elif( NotaControl + NotaPractico >= 5.5):
+		#aprobado
+		return 1
 
+	return 0
 
+print(ValidacionNotas(5.6,5.6))
 

@@ -9,8 +9,14 @@ Nombre = fn.IngreseNombre()
 
 PonderacionControles = fn.TomaNotas(5,'Control')
 PonderacionPractico  = fn.TomaNotas(5,'Practico')
-PonderacionProyecto  = fn.TomaNotas(5,'Proyecto')
-PonderacionExamen    = fn.TomaNotas(5,'Examen')
+
+ResultadoValidacion = fn.ValidacionNotas(PonderacionControles,PonderacionPractico)
+
+
+
+
+# PonderacionProyecto  = fn.TomaNotas(5,'Proyecto')
+# PonderacionExamen    = fn.TomaNotas(5,'Examen')
 
 PonderacionSuma = PonderacionControles + PonderacionPractico + PonderacionProyecto + PonderacionExamen
 
