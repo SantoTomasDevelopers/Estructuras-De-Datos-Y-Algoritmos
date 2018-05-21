@@ -23,8 +23,12 @@ def TomaNotas(CantidadNotas,TipoNota):
 		for i in range(CantidadNotas):
 			Nota = float(input('Ingrese '+TipoNota+' N° : '+str(i+1)+' :: '))
 			Suma = Nota + Suma 
+			#print(Suma)
 
+		print(Suma)
+		print(CantidadNotas)
 		Promedio = Suma	/ CantidadNotas
+		print(Promedio)
 		if(TipoNota == 'Control'):
 			return (PonderacionTeorico * Promedio)/100
 
