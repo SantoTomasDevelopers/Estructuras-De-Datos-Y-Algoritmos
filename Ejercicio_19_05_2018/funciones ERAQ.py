@@ -1,8 +1,9 @@
 
+#funciones
+
 def nombre():
-	nombre = input("ingrese nombre:: ")
-	apellido = (input("ingrese apellido:: "))
-	return nombre + ' ' + apellido
+	nombre=str(input("ingrese su nombre "))
+	return nombre
 
 
 def nota_controles_teoricos (cantidad_de_notas):
@@ -31,9 +32,19 @@ def nota_proyecto ():
 	return nota_proyecto
 	
 def eximido_o_reprobado (promedioTotal):
+	calpromedio1 = promedioTotal*0.8
+	calpromedio2 = 4.0-calpromedio1
+	calpromedio3 = calpromedio2 * 0.2
+
 	if (promedioTotal>5.5):
-		print("Felicidades ha quedado eximido con un promedio de : ", promedioTotal)
-	elif (((promedioTotal+7.0)/2)<4.0):
-		print ("Has reprobado")
-	elif (((promedioTotal+7.0)/2)>4.0):
-		print ("Debe rendir examen")
+		print "Felicidades ha quedado eximido con un promedio de : ", promedioTotal
+	elif ((calpromedio3+promedioTotal)<4.0):
+		print "Has reprobado"
+	elif ((calpromedio3+promedioTotal)>4.0 and (calpromedio3+promedioTotal)<5.5):
+		print "Debe rendir examen"
+		nota_examen=int(input("Ingrese nota del examen"))
+		pasa_de_curso=(promedioTotal*0.8)+(nota_examen*0.2)
+		if (pasa_de_curso>4.0):
+			print "Apruebas con: ",pasa_de_curso
+		else:
+			print "Reprobado "
