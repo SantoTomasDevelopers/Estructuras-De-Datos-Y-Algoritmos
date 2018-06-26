@@ -12,7 +12,7 @@ ListaUsuarios = {
 			}
 	},
 	"2-7":{
-		"rut":"",
+		"rut":"2-7",
 		"nombreCompleto":"klñ",
 		"Direccion":"iop",
 		"Email":"klñ@jkl.cl",
@@ -23,8 +23,6 @@ ListaUsuarios = {
 			}
 	}
 }
-#for usr in ListaUsuarios:
-#	print(ListaUsuarios[usr]["nombreCompleto"])
 
 Salida = True
 while Salida:
@@ -50,5 +48,14 @@ while Salida:
 						NumeroNota += 1
 				else:
 					print("Actividad No existe")
+			#imprimir punto 4?
+			for actividad in ListaUsuarios[usrConsulta]["Actividades"]:
+				NumeroNota = 1
+				#if(actividad != actConsulta):
+				for Notas in ListaUsuarios[usrConsulta]["Actividades"][actividad]:
+					
+					print("Notas de "+actividad+" N° "+str(NumeroNota)+" es: "+str(Notas))
+					NumeroNota += 1
+			
 		else:
 			print("Usuario no existe")
